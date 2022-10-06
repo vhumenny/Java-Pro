@@ -1,0 +1,59 @@
+package Homework6;
+import java.util.Scanner;
+
+public class CounterStrike {
+
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter the name of team #1: ");
+        String teamName1 = scanner.nextLine();
+
+        System.out.println("Enter frags for 1st teammate of team " +teamName1+ ": ");
+        int blueFrag1 = scanner.nextInt();
+        System.out.println("Enter frags for 2nd teammate of team " +teamName1+ ": ");
+        int blueFrag2 = scanner.nextInt();
+        System.out.println("Enter frags for 3rd teammate of team " +teamName1+ ": ");
+        int blueFrag3 = scanner.nextInt();
+        System.out.println("Enter frags for 4th teammate of team " +teamName1+ ": ");
+        int blueFrag4 = scanner.nextInt();
+        System.out.println("Enter frags for 5th teammate of team " +teamName1+ ": ");
+        int blueFrag5 = scanner.nextInt();
+
+        System.out.println(" ");
+        Scanner scanner2 = new Scanner(System.in);
+        System.out.println("Enter the name of team #2: ");
+        String teamName2 = scanner2.nextLine();
+
+        System.out.println("Enter frags for 1st teammate of team " +teamName2+ ": ");
+        int redFrag1 = scanner2.nextInt();
+        System.out.println("Enter frags for 2nd teammate of team " +teamName2+ ": ");
+        int redFrag2 = scanner2.nextInt();
+        System.out.println("Enter frags for 3rd teammate of team " +teamName2+ ": ");
+        int redFrag3 = scanner2.nextInt();
+        System.out.println("Enter frags for 4th teammate of team " +teamName2+ ": ");
+        int redFrag4 = scanner2.nextInt();
+        System.out.println("Enter frags for 5th teammate of team " +teamName2+ ": ");
+        int redFrag5 = scanner2.nextInt();
+
+        int teamMates = 5;
+
+        float averageBlue,averageRed;
+
+        int sumBlue = blueFrag1+blueFrag2+blueFrag3+blueFrag4+blueFrag5;
+        averageBlue = (float) sumBlue/teamMates;
+        System.out.println("Average amount of frags for Blue team: " +averageBlue);
+
+        int sumRed = redFrag1+redFrag2+redFrag3+redFrag4+redFrag5;
+        averageRed = (float) sumRed/teamMates;
+        System.out.println("Average amount of frags for Red team: " +averageRed);
+
+        if (sumRed<sumBlue){
+           System.out.println("Победила команда " + teamName1 + " набравшая " + sumBlue + " очков");
+        }
+        else {
+            System.out.println("Победила команда " + teamName2 + " набравшая " + sumRed + " очков");
+        }
+
+    }
+}
