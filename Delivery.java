@@ -4,7 +4,7 @@ import Warehouse.app.Users.Adresee;
 import Warehouse.app.Users.Client;
 
 public class Delivery {
-
+   
    private final Integer deliveryId;
    private final String deliveryType;
    private final Client clientInfo;
