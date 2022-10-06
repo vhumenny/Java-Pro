@@ -4,7 +4,6 @@ import java.util.Scanner;
 public class CounterStrike {
 
     public static void main(String[] args) {
-
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter the name of team #1: ");
         String teamName1 = scanner.nextLine();
@@ -54,6 +53,5 @@ public class CounterStrike {
         else {
             System.out.println("Победила команда " + teamName2 + " набравшая " + sumRed + " очков");
         }
-
     }
 }
