@@ -1,0 +1,53 @@
+package Homework8;
+
+import java.util.Scanner;
+
+public abstract class NumberOfShuttles {
+
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Please enter the quantity of shuttles to be numbered: ");
+        int numberOfShuttles = scanner.nextInt();
+
+        System.out.println("Please enter the number for the first shuttle: ");
+        int firstNum = scanner.nextInt();
+
+        wrongNumber(numberOfShuttles,firstNum);
+
+        int[] shuttles = new int[numberOfShuttles];
+
+
+        for (int i = firstNum, j = 0; j < shuttles.length; i++) {
+
+
+            if (String.valueOf(i).contains("4") || String.valueOf(i).contains("9")) {
+
+                continue;
+            }
+            shuttles[j] = i;
+            j++;
+        }
+        printShuttles(numberOfShuttles, shuttles);
+
+    }
+
+    public static boolean wrongNumber (int numberOfShuttles, int firstNum){
+        if (numberOfShuttles<=0||firstNum<=0) {
+            System.out.println("You entered the wrong number! Please try again!");
+            return true;
+        }
+        else{
+                return false;
+            }
+    }
+    public static void printShuttles(int numberOfShuttles, int[] shuttles) {
+
+        for (int i = 0; i < numberOfShuttles; i++) {
+            System.out.println("Shuttle number is = " + shuttles[i]);
+        }
+        return;
+    }
+
+}
