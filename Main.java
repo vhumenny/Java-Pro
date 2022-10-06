@@ -3,7 +3,6 @@ package Warehouse.app;
 import Warehouse.app.Print.ConsolDeliveryOnWarehouse;
 import Warehouse.app.Users.Adresee;
 import Warehouse.app.Users.Client;
-
 import java.util.Random;
 import java.util.Scanner;
 
